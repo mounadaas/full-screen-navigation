@@ -1,0 +1,73 @@
+a, section .close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  padding: 50px;
+  color: #E7E7E7;
+}
+section .close {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  border-radius: 50%;
+  padding: 10px;
+  border: 2px solid #E7E7E7;
+}
+section .close:hover {
+  border: 2px solid indianred;
+  color: indianred;
+}
+section nav {
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: #191A1C;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  transform: translateY(-100%);
+  transition: 0.3s;
+}
+section nav.open {
+  transform: translateY(0);
+  transition: 0.3s;
+}
+
+a {
+  text-decoration: none;
+  color: #E7E7E7;
+  transition: 0.3s;
+  flex-basis: 40px;
+  padding: 10px;
+  font-size: 30px;
+}
+a:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.toggel {
+  font-size: 25px;
+  padding: 5px;
+  background-color: #333333;
+}
+.toggel:hover {
+  background-color: #191A1C;
+}
+.toggel i {
+  color: #E7E7E7;
+}
+.toggel i:hover {
+  color: indianred;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,76 @@
+$padding50 : 50px;
+%flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+$dark-color:#191A1C;
+$light-color:#E7E7E7;
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    padding: $padding50;
+    color: $light-color;
+    .close{
+        position: fixed;
+        top: $padding50;
+        right: $padding50;
+        border-radius: 50%;
+        padding: 10px;
+        border: 2px solid $light-color;
+        @extend%flexbox;
+        &:hover{
+            border: 2px solid indianred;
+            color: indianred;
+        }
+    }
+    nav{
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: fixed;      
+        background-color: #191A1C;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        transform: translateY(-100%);
+        transition: 0.3s;
+        &.open{
+            transform: translateY(0);
+            transition: 0.3s
+        }
+    }
+}
+a{
+    @extend%flexbox;
+    text-decoration: none;
+    color: $light-color;
+    transition: 0.3s;
+    flex-basis: 40px;
+    padding: 10px;
+    font-size: 30px;
+    &:hover{
+        background-color: rgba(0,0,0,50%);
+    }
+}
+.toggel{
+    font-size: 25px;
+    padding: 5px;
+    background-color: #333333;
+    &:hover{
+        background-color: #191A1C;
+    }
+    i{
+        color: $light-color;
+    &:hover{
+        color: indianred;
+       
+    }
+    }
+    
+}
